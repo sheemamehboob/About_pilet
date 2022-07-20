@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <PiralInstance>D:/SheemaMehboob/GoodHealth-Piral/dist/emulator/goodhealth-piral-1.0.0.tgz</PiralInstance>
+	  <NpmRegistry>https://registry.npmjs.org</NpmRegistry>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="setup.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.4" PrivateAssets="all" />
+    <PackageReference Include="Piral.Blazor.Tools" Version="6.0.3-pre.20220704.2" />
+    <PackageReference Include="Piral.Blazor.Utils" Version="6.0.3-pre.20220704.2" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.1.0.61" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="setup.tsx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </TypeScriptCompile>
+  </ItemGroup>
+
+</Project>
